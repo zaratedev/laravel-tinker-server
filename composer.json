@@ -1,0 +1,56 @@
+{
+    "name": "zaratedev/laravel-tinker-server",
+    "description": "Awesome Laravel Tinker Server",
+    "keywords": [
+        "zaratedev",
+        "laravel",
+        "tinker"
+    ],
+    "homepage": "https://github.com/zaratedev/laraveltinkerserver",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Jonathan Zarate",
+            "email": "zaratedev@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.1",
+        "clue/stdio-react": "^2.3",
+        "illuminate/support": "^6.0",
+        "psy/psysh": "^0.9.12"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^4.0",
+        "phpunit/phpunit": "^8.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Zaratedev\\LaravelTinkerServer\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Zaratedev\\LaravelTinkerServer\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Zaratedev\\LaravelTinkerServer\\LaravelTinkerServerServiceProvider"
+            ],
+            "aliases": {
+                "LaravelTinkerServer": "Zaratedev\\LaravelTinkerServer\\LaravelTinkerServerFacade"
+            }
+        }
+    }
+}
